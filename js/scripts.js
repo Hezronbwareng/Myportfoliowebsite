@@ -146,3 +146,45 @@ document.addEventListener("DOMContentLoaded", function() {
     // Cleanup
     document.body.removeChild(anchor);
   });
+
+
+
+  // contact form validation 
+  
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // Prevent the form from submitting
+
+    // Get form values
+    let name = document.getElementById('cname').value;
+    let email = document.getElementById('cemail').value;
+    let message = document.getElementById('cmessage').value;
+
+    // Send form data to the server
+    fetch('/submit-form', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        name: name,
+        email: email,
+        message: message
+      })
+    })
+      .then(function(response) {
+        // Handle the response from the server
+        if (response.ok) {
+          alert('Message sent successfully!');
+          document.getElementById('contactForm').reset(); // Reset the form
+        } else {
+          throw new Error('Error: ' + response.status);
+        }
+      })
+      .catch(function(error) {
+        // Handle errors
+        console.log(error);
+        alert('An error occurred. Please try again later.');
+      });
+  });
+
+     
