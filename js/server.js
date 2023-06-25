@@ -1,33 +1,40 @@
 const express = require('express');
 const app = express();
-const bodyParser = require('body-parser');
-const fs = require('fs');
-const path = require('path');
+const nodemailer = require('nodemailer');
 
-// Parse incoming request bodies
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
-// Serve static files from the "public" directory
-app.use(express.static('public'));
-
-// Endpoint to handle form submissions
 app.post('/submit-form', (req, res) => {
   const { name, email, message } = req.body;
 
-  // Store the message in a file
-  const data = `Name: ${name}\nEmail: ${email}\nMessage: ${message}\n\n`;
-  fs.appendFile(path.join(__dirname, 'messages.txt'), data, (err) => {
-    if (err) {
-      console.error(err);
-      res.sendStatus(500);
+  // Perform form validation and any other necessary processing
+  // ...
+
+  // Send email using Nodemailer
+  const transporter = nodemailer.createTransport({
+    // Configure your email provider's SMTP settings
+    // ...
+  });
+
+  const mailOptions = {
+    from: email, // Use the email address entered by the form submitter as the sender
+    to: 'bwarenghezron@gmail.com', // Replace with the recipient's email address
+    subject: 'New Message from Contact Form',
+    text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`
+  };
+
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      console.log('Error sending email:', error);
+      res.status(500).send('An error occurred. Please try again later.');
     } else {
-      res.sendStatus(200);
+      console.log('Email sent:', info.response);
+      res.status(200).send('Message sent successfully!');
     }
   });
 });
 
-// Start the server
 app.listen(3000, () => {
-  console.log('Server is running on port 3000');
+  console.log('Server started on port 3000');
 });

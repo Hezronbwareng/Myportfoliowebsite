@@ -117,8 +117,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-
-
   // dowload resume
 
 
