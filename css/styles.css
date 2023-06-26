@@ -1293,7 +1293,6 @@ input[type='checkbox'] {
 	}
 	/* end of contact */
 
-
 	.whatsapp-icon {
 		position: fixed;
 		right: 80px; /* Adjust the value to move the icon to the left */
@@ -1315,6 +1314,19 @@ input[type='checkbox'] {
 	  .whatsapp-icon:hover {
 		background-color: darkgreen;
 	  }
+	  
+	  /* Media query for smaller screen sizes */
+	  @media (max-width: 768px) {
+		.whatsapp-icon {
+		  background-color: green;
+		  right: 20px; /* Adjust the value to move the icon to a different position */
+		  bottom: 20px; /* Adjust the value to move the icon to a different position */
+		  font-size: 30px; /* Adjust the value to change the icon size */
+		  width: 60px;
+		  height: 60px;
+		}
+	  }
+	  
 	  
 	  
 
