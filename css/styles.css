@@ -286,7 +286,7 @@ a:hover {
 	font-size: 0.875rem;
 	line-height: 1.875rem;
 	transition: all 0.2s;
-	-webkit-appearance: none; /* removes inner shadow on form inputs on ios safari */
+
 }
 
 .form-control-select {
@@ -1220,30 +1220,7 @@ input[type='checkbox'] {
 	/* end of header */
 
 
-	/* Details */
-	.split {
-		height: 760px;
-	}
 	
-	.split .area-1 {
-		height: 100%;
-		width: 50%;
-		display: inline-block;
-	}
-	
-	.split .area-2 {
-		height: 100%;
-		width: 50%;
-		display: inline-block;
-		vertical-align: top;
-	}
-
-	.split .text-container {
-		width: 400px;
-		margin-left: 3rem;
-	}
-	/* end of details */
-
 
 	/* Testimonials */
 	.cards-1 .card {
@@ -1292,10 +1269,9 @@ input[type='checkbox'] {
 		margin-left: auto;
 	}
 	/* end of contact */
-
 	.whatsapp-icon {
 		position: fixed;
-		right: 80px; /* Adjust the value to move the icon to the left */
+		right: 80px;
 		bottom: 20px;
 		z-index: 9999;
 		width: 60px;
@@ -1315,21 +1291,17 @@ input[type='checkbox'] {
 		background-color: darkgreen;
 	  }
 	  
-	  /* Media query for smaller screen sizes */
 	  @media (max-width: 768px) {
 		.whatsapp-icon {
 		  background-color: green;
-		  right: 20px; /* Adjust the value to move the icon to a different position */
-		  bottom: 20px; /* Adjust the value to move the icon to a different position */
-		  font-size: 30px; /* Adjust the value to change the icon size */
+		  right: 20px;
+		  bottom: 20px;
+		  font-size: 30px;
 		  width: 60px;
 		  height: 60px;
 		}
 	  }
 	  
-	  
-	  
-
 	/* Extra Pages */
 	.ex-cards-1 .card {
 		display: inline-block;
