@@ -1269,39 +1269,7 @@ input[type='checkbox'] {
 		margin-left: auto;
 	}
 	/* end of contact */
-	.whatsapp-icon {
-		position: fixed;
-		right: 80px;
-		bottom: 20px;
-		z-index: 9999;
-		width: 60px;
-		height: 60px;
-		border-radius: 50%;
-		background-color: green;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		transition: background-color 0.3s ease;
-		color: white;
-		text-decoration: none;
-		font-size: 30px;
-	  }
-	  
-	  .whatsapp-icon:hover {
-		background-color: darkgreen;
-	  }
-	  
-	  @media (max-width: 768px) {
-		.whatsapp-icon {
-		  background-color: green;
-		  right: 20px;
-		  bottom: 20px;
-		  font-size: 30px;
-		  width: 60px;
-		  height: 60px;
-		}
-	  }
-	  
+	
 	/* Extra Pages */
 	.ex-cards-1 .card {
 		display: inline-block;
