@@ -185,3 +185,8 @@ document.addEventListener("DOMContentLoaded", function() {
       });
   });
 
+
+
+  //updates the copyright dynamically
+  const currentYear = new Date().getFullYear();
+  document.getElementById("currentYear").textContent = currentYear;

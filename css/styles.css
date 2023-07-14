@@ -1161,19 +1161,19 @@ section#projects {
 }
 
 .credit {
-    text-align: center;
-    margin: 0 auto; /* Use auto margin to center horizontally */
-}
-
-.centered-text {
-    font-size: 1rem;
-    color: #555050;
-    padding: 1.5rem;
-}
-
-.centered-text span {
-    color: var(--main-color);
-}
+	text-align: center;
+	margin-top: 2rem;
+	font-size: 14px;
+  }
+  
+  .credit .centered-text {
+	color: #888;
+  }
+  
+  .credit .centered-text span {
+	color: #5705a3;
+  }
+  
 
 
 
